@@ -1,0 +1,714 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /*Reset para rems-- 62.5% = 10px*/
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif
+    
+}
+
+/*Utilidades*/
+
+.contenedor{
+    max-width: 110rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.seccion{
+    padding: 3rem 0;
+}
+
+.seccion p{
+    text-align: center;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0.7rem 0;
+}
+
+h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 7rem;
+}
+
+h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+.t-a{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Boton*/
+.boton{
+    display: inline-block;
+    font-family: 'Bebas Neue', cursive;
+    background-color: #999;
+    padding: 1rem 4rem;
+    color: black;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 1.6rem;
+    transition: all .3s ease;
+    border: 2px solid #999;
+    background: center;
+}
+
+.boton.hollow,
+.boton.hollow:hover{
+    background-color: white;
+    color: black;
+}
+
+.boton:hover{
+    background-color: #999;
+}
+
+.boton-curvo{
+    border-radius: 1rem;
+    align-self: center;
+}
+
+.f-e{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.transparente{
+    background-color: transparent;
+    border-color: white;
+}
+
+.transparente:hover{
+    border: none;
+}
+
+/*Header*/
+
+.contenedor-video{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.contenedor-video video{
+    width: 100vw;
+}
+
+video{
+    width: 100vw;
+}
+
+.barra-home{
+    position: absolute;
+    top: -25rem;
+    right: 0rem;
+    display: flex;
+    justify-content:/*alinear contenido horizontalmente*/ space-between; /* crea un espacio entre el logo y la barra */
+    align-items: center; /* alinea verticalmente en este caso (center) los alinea para que esten al mismo nivel */
+    padding-top: 3rem;
+}
+
+nav a{
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1.8rem; /* rems-- 1.8rem = 18px*/
+    margin-right: 2rem;
+}
+
+.contenido-presentacion{
+    position: absolute;
+    top: 25rem;
+    left: 0;
+    width: 100%;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.contenido-presentacion h1{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 7rem;
+
+}
+
+.redes-sociales{
+    text-align: center;
+}
+
+.redes-sociales a{
+    color: white;
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+
+.redes-sociales a:last-of-type{
+    margin-right: 0;
+}
+
+/*Experiencias*/
+
+.experiencias a:first-of-type{
+    margin-top: 0px;
+}
+
+.experiencias{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    width: 100%;
+    row-gap: 2rem;
+}
+
+.experiencia{
+ 
+    border-radius: 2rem;
+    height: 18rem;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease;
+    background: linear-gradient(blue);
+    position: relative;
+}
+
+.experiencia:hover, .experiencia:active{
+    transition: all 1s ease;
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-color: #ddd;
+}
+
+.experiencia-contenido{
+    height: 10rem;
+    top: 10%;
+    font-size: 1.6rem;
+    padding: 0.9rem;
+}
+
+.experiencia:hover .experiencia-contenido{
+    opacity: 1;
+    font-size: 1.61rem;
+    transition: all 2s ease;
+}
+
+.opacity{
+    opacity: 0;
+}
+
+
+/*proyectos*/
+
+.lista-proyectos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 5rem;
+    column-gap: 3rem;
+}
+
+.proyecto{
+    position: relative;
+}
+
+.proyecto p{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    color: white;
+    padding: 1.5rem 1rem;
+    margin: 0;
+    background-color: rgba(0, 0, 0, .55);
+    width: 100%;
+    text-align: left;
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    font-size: 2rem;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+
+.proyecto img{
+    max-width: 100%;
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.proyecto img:hover{
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.02);
+}
+
+.proyecto:hover p{
+    opacity: 0;
+    bottom: -2rem;
+    padding-bottom: 0;
+    -webkit-transform: scale(1.02);
+    
+}
+
+/*Resumen*/
+.parallax::before{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-filter: brightness(.8);
+    filter: brightness(.8)
+}
+
+.enumerador{
+    position: relative;
+    height: auto;
+}
+
+.enumerador::before{
+    content: '';
+    background-image: url(../img/parallax.jpg);
+}
+
+.resumen-yo{
+    position: relative;
+    padding: 12rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.resumen-yo li{
+    text-align: center;
+    flex: 0 0 25%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.numero{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    font-size: 6.5rem;
+    margin: 0 0 1rem 0;
+}
+
+/*---------paginas secundarias-------------*/
+
+.contenedor-barra{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.titulo-p{
+    color: white;
+}
+
+.barra{
+    background-color: #353535;
+    padding: 2rem 0;
+    flex: 1;
+}
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.logo{
+    flex: 0 0 33%;
+}
+
+.logo img{
+    width: 100%;
+    
+}
+
+
+/*Nav principal*/
+
+.navegacion-principal{
+    width: 100%;
+    flex: 0 0 calc(66.6% - 2rem);
+    display: inline-block;
+    text-align: right;
+}
+
+
+.navegacion-principal a{ 
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0;
+    text-align: center;
+    margin-right: 1.5rem;
+    padding: 1rem 2rem;
+    
+}
+
+.navegacion-principal a:last-of-type{
+    margin-right: 0;
+}
+
+.navegacion-principal a:last-of-type{
+        color: #fe4918;
+        border: 2px solid #fe4918;
+}
+
+.navegacion-principal a:last-of-type:Hover{
+    color: white;
+}
+
+.navegacion-principal a:Hover{
+    background-color: #fe4918;
+    cursor: pointer;
+}
+
+/*About.html*/
+
+/*Iconos*/
+.iconos-perfil{
+    display: grid;
+    grid-template-columns: Repeat(3, 1fr);
+    justify-content: space-between; 
+    grid-column-gap: 2rem;
+    grid-row-gap: 4rem;
+}
+
+.icono{
+    text-align: center;
+}
+.icono h3{
+    text-transform: uppercase; 
+}
+
+.icono img{
+    width: 40%;
+    height: 50%;
+}
+
+.icono p{
+    font-size: 1.2rem;
+}
+
+/*perfil*/
+
+.perfil{
+    font-size: 5rem;
+    margin: 4rem 0;
+}
+
+.contenido-perfil{
+    display: grid/*Grid es como flex*/;
+    grid-template-columns: Repeat(2, 1fr)/*Si le voy a asignar el mismo espacio a todo uso repeat(#deVecesRepetir, #EspacioAginado)*/;
+    /*contenido-perfil es el padre de 2 divs, entonces con grid-template-columns le doy a esos dos divs un cierto porcentaje de espacio de anchura para cada uno de los divs o (Le doy tantas fracciones[fr] del espacio total a cada columna, hay dos divs asi que si le doy 1 fr a cada una le doy la mitad del espacio total a ambas)*/
+    grid-column-gap: 2rem; /*Con grid puedo hacer la separacion de columnas con "grid-column-gap"*/
+}
+
+.texto-perfil h4{
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0; 
+    text-align: center;
+}
+
+.texto-perfil p{
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 1rem 0 1rem 0; 
+    text-align: justify;
+}
+
+/*Servicios*/
+/*Tabla de precios*/
+.lista-precios > li{
+    padding: 1rem;
+    text-align: center;
+}
+
+.lista-precios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+
+.tabla-precio{
+    border: 1px solid #e1e1e1;
+    background-color: white;
+    padding: 4rem 0;
+    transition: all .3s ease;
+}
+
+.tabla-precio ul li{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #868686;
+    line-height: 2.6rem;
+}
+
+.tabla-precio ul li:before{
+    font-family: 'FontAwesome';
+    display: inline-block;
+    padding: 0 0.5rem;
+    vertical-align: top;
+    font-size: 2rem;
+    color: green;
+    -webkit-font-smoothing: antialiased;
+    content: '\f00c';
+    
+}
+
+.tabla-precio h3{
+    font-family: 'Bebas Neue', cursive;
+    margin: 2rem 0;
+}
+
+.tabla-precio p{
+    font-family: 'Bebas Neue', cursive;
+    color: black;
+    font-size: 6.5rem;
+    margin: 1rem 0 2rem 0;
+    
+}
+
+.tabla-precio:hover{
+    transform: scale(1.1);
+    border: 1px solid #999;
+    box-shadow: 0px o 5rem #666;
+}
+
+/*Contacto*/
+
+.contenedor-contacto{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.formulario p{
+    font-size: 1.5rem;
+    margin: 2rem 0 0 0;
+}
+
+legend{
+    font-size: 2.4rem;
+    font-weight: 300;
+}
+
+label{
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+}
+/* es otra opcion: input[type='text'],
+input[type='email'] */
+
+input:not([type='submit']), 
+textarea, 
+select{
+    padding: 1rem;
+    display: block;
+    background-color: #e1e1e1;
+    width: 100%;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 2rem;
+}
+input[type='radio']{
+    width: auto;
+    margin: 0;
+}
+
+select{ /*-webkit- es un prefijo y para ponerle al select las propiedades del codigo anterior es necesario ponerlo*/
+    -webkit-appearance: none;
+    appearance: none;
+}
+textarea{
+    height: 20rem;
+}
+
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+fieldset .p-contact{
+    text-align: left;
+}
+
+/*Mapa*/
+.mapa{
+    height: 42rem;
+    z-index: 1;
+}
+
+/*Testimoniales*/
+
+.testimoniales{
+    padding: 0 0 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+
+
+blockquote{
+    background-color: white;
+    border: 2.5px solid #e1e1e1;
+    position: relative;
+    margin: 0 0 1rem 0;
+    padding-bottom: 2rem;
+}
+
+.testimonial blockquote p{
+    text-align: justify;
+    font-size: 1.6rem;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    padding: 0 4rem 0 6.5rem;
+}
+
+.testimonial blockquote p:before{
+    content: '\201c';
+    position: absolute;
+    font-size: 14rem;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #999;
+    left: 13px;
+    top: 0;
+}
+
+.testimonial footer{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial footer img{
+    width: 20%;
+    border-radius: 50%;
+    margin-left: 3rem;
+}
+
+.testimonial footer cite{
+    text-align: left;
+    color: #999;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-left: 0.8rem;
+    padding-top: 1rem;
+    width: 70%;
+    font-weight: bold;
+    font-style: normal
+}
+
+.testimonial footer span{
+    color: black;
+    display: block;
+    text-transform: none;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+/*Newsletter*/
+
+.newsletter{
+    position: relative;
+    height: auto;
+}
+
+.newsletter:before{
+    content: '';
+    background-image: url(../img/bg-newsletter.jpg);
+    
+}
+
+.newsletter .contenido{
+    padding: 10rem 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.newsletter .contenido p{
+    font-size: 2rem;
+    
+}
+
+.newsletter .contenido h3{
+    color: white;
+    text-transform: uppercase;
+    font-size: 7vw;
+    font-family: 'PT Sans', sans-serif;
+}
+
+
+/*Footer*/
+.site-footer{
+    background-color: #353535;
+    padding-top: 4rem;
+    margin-top: 2rem;
+}
+
+.contenedor-footer > div{
+    color: white;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.copyright{
+    text-align: center;
+    background-color: #2e2e2e;
+    padding: 1rem 0;
+    color: white;
+    margin: 2rem 0 0 0;
+    font-size: 1.5rem;
+}
