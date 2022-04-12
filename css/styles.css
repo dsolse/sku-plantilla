@@ -439,10 +439,7 @@ nav a{
 }
 
 .contenido-perfil{
-    display: grid/*Grid es como flex*/;
-    grid-template-columns: Repeat(2, 1fr)/*Si le voy a asignar el mismo espacio a todo uso repeat(#deVecesRepetir, #EspacioAginado)*/;
-    /*contenido-perfil es el padre de 2 divs, entonces con grid-template-columns le doy a esos dos divs un cierto porcentaje de espacio de anchura para cada uno de los divs o (Le doy tantas fracciones[fr] del espacio total a cada columna, hay dos divs asi que si le doy 1 fr a cada una le doy la mitad del espacio total a ambas)*/
-    grid-column-gap: 2rem; /*Con grid puedo hacer la separacion de columnas con "grid-column-gap"*/
+   margin: 4rem 0;
 }
 
 .texto-perfil h4{
