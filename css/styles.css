@@ -470,6 +470,12 @@ nav a{
     column-gap: 2rem;
 }
 
+.lista-precios-2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
 
 .tabla-precio{
     border: 1px solid #e1e1e1;
