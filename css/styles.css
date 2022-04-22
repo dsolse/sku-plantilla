@@ -135,6 +135,7 @@ video{
     justify-content:/*alinear contenido horizontalmente*/ space-between; /* crea un espacio entre el logo y la barra */
     align-items: center; /* alinea verticalmente en este caso (center) los alinea para que esten al mismo nivel */
     padding-top: 3rem;
+    z-index: 1000;
 }
 
 nav a{
@@ -144,12 +145,18 @@ nav a{
     margin-right: 2rem;
 }
 
-.contenido-presentacion{
+.contenido-presentacion {
     position: absolute;
     top: 25rem;
     left: 0;
     width: 100%;
     font-family: 'Bebas Neue', cursive;
+}
+
+@media only screen and (max-width: 1000px) {
+  .contenido-presentacion {
+      top: 5em;
+  }
 }
 
 .contenido-presentacion h1{
@@ -465,7 +472,7 @@ nav a{
 
 .lista-precios{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
 }
 
