@@ -398,8 +398,8 @@ nav a{
 }
 
 .navegacion-principal a:last-of-type{
-        color: #fe4918;
-        border: 2px solid #fe4918;
+        color: #122023;
+        border: 2px solid #122023;
 }
 
 .navegacion-principal a:last-of-type:Hover{
@@ -407,7 +407,7 @@ nav a{
 }
 
 .navegacion-principal a:Hover{
-    background-color: #fe4918;
+    background-color: #122023;
     cursor: pointer;
 }
 
